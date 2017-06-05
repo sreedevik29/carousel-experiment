@@ -1,8 +1,25 @@
-#bg-color {
-	background-color: red;
-	position: absolute; 
-	top: 0; 
-	left: 0;
-	height: 100%; 
+#main {
+	position: relative;
 	width: 100%;
+	margin-left: 0;
+	transition: 500ms ease-in-out all;
+}
+
+.box {
+	top: 0;
+	left: 0;
+	width: 100%;
+	position: absolute;
+}
+
+.bg-yellow {
+	background-color: yellow;
+}
+
+.bg-red {
+	background-color: red;
+}
+
+.pos-1 {
+	left: 100%;
 }
