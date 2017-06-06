@@ -20,6 +20,18 @@
 	background-color: red;
 }
 
-.pos-1 {
-	left: 100%;
+.bg-blue {
+	background-color: blue;
+}
+
+.bg-green {
+	background-color: green;
+}
+
+.bg-orange {
+	background-color: orange;
+}
+
+.bg-pink {
+	background-color: pink;
 }

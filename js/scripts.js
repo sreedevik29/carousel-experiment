@@ -2,17 +2,23 @@ $(document).ready(function() {
 
 	// DOM Selectors
 	var main = $("#main");
-	
+	var boxes = $(".box");
+	var boxWidth = $(window).width() - 16;
+	var clickCounter = 0;
+
 	var windowHeight = $(window).height();	
-	$(".box").css("height", windowHeight);
+	boxes.css("height", windowHeight);
 
-	main.on("click", function() {
-		main.css("margin-left", "-100%");
+	boxes.each(function(index){
+		$(this).css("left", function(){
+			var percentage = index * 100;
+			return percentage + "%";
+		});
 	});
-});
 
-// When the document loads, 
-// you assign the window height to every box div
-	// find the function for window height
-	// select all the boxes
-	// set the height of the section (box) to the window height
+	main.on("click", function(){
+		clickCounter++;
+		main.css("margin-left", (clickCounter * boxWidth) * -1);
+	});
+
+});
